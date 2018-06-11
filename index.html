@@ -1,0 +1,45 @@
+<style>
+    a {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.7);
+        opacity: 0.7;
+        /*A value of 1 is opaque, which isn't transparent at all. A value of 0.5 is half see-through. 
+        A value of 0 is completely transparent.*/
+        text-transform: lowercase;
+        /* Value Result lowercase "transform me",  uppercase "TRANSFORM ME",  capitalize "Transform Me"
+         initial Use the default value inherit Use the text-transform value from the parent element none 
+         Default: Use the original text font-size: 14px*/
+        font-weight: 500;
+        line-height: 25px;
+        /*Line spacing..*/
+    }
+
+
+    a:hover {
+        /*Changes style of "a" when pointed at. Links.*/
+        color: #00F;
+    }
+
+    .test {
+        position: relative;
+        top: 15px;
+        /*
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    position: fixed;
+    */
+        float: left;
+        /* or right. parang gawin mo column*/
+        z-index: 2;
+        /* accepts integer value,
+        the higher one will overlap the lower val */
+        margin: auto;
+        /* centers an element */
+        background: hsl(180, 100%, 50%);
+        /*hue saturation lightness, this code, produces cyan */
+        /*background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...); */
+        /* Linear gradient */
+        background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+        background: url("https://i.imgur.com/MJAkxbh.png");
+    }
+</style>
