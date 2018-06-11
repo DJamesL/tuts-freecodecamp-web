@@ -1,0 +1,55 @@
+<style>
+    p {
+        font-size: 20px;
+    }
+
+    /* 
+    @media (<condition>) {CSS rules to follow }
+    */
+
+    @media (max-height: 800px) {
+        /*This will use font size 10px, if <- queery is true */
+        p {
+            font-size: 10px;
+        }
+    }
+
+    img {
+        /*auto adjust depending on the screen */
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    /*To appear HD, define their width and height values as only half of what the original file is. */
+
+    /* 
+    vw: 10vw would be 10% of the viewport's width.
+    vh: 3vh would be 3% of the viewport's height.
+    vmin: 70vmin would be 70% of the viewport's smaller dimension (height vs. width).
+    vmax: 100vmax would be 100% of the viewport's bigger dimension (height vs. width).
+    */
+
+    h2 {
+        width: 80vw;
+    }
+
+    p {
+        width: 75vw;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responive web</title>
+</head>
+
+<main>
+    <!-- Select your target audience, if mobile, design for mobile, 
+    then add conditional for desktop-->
+
+</main>
+
+</html>

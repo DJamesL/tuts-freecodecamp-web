@@ -1,0 +1,69 @@
+<!-- main, header, footer, nav, article, and section, new HTML5 tags-->
+
+<!--
+<div> - groups content
+<section> - groups related content
+<article> - groups independent, self-contained content
+-->
+
+<!-- 
+    <header> must be inisde the body element
+    <nav> put on main navigation links, for readers navigation.
+    <footer> - well for footer
+    &copy2016 - copyright
+-->
+<style>
+    .sr-only {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+    }
+    /*add this class to tables or charts. to hide them */
+</style>
+
+
+<body>
+    <main>
+        <audio id="meowClip" controls>
+            <source src="audio/meow.mp3" type="audio/mpeg" />
+            <source src="audio/meow.ogg" type="audio/ogg" />
+        </audio>
+        <figure>
+            <!-- for charts, and graphs-->
+            <figcaption>
+                <!-- descriptive name of charts, graphs..-->
+
+            </figcaption>
+        </figure>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <!-- Other way of treating Radio buttons, since they are in a "group", and
+            use can only choose 1.
+            <form>
+                <fieldset>
+                <legend>Choose one of these three items:</legend>
+                <input id="one" type="radio" name="items" value="one">
+                <label for="one">Choice One</label><br>
+                <input id="two" type="radio" name="items" value="two">
+                <label for="two">Choice Two</label><br>
+                <input id="three" type="radio" name="items" value="three">
+                <label for="three">Choice Three</label>
+                </fieldset>
+            </form>
+        -->
+        <!-- DATE input-->
+        <label for="input1">Enter a date:</label>
+        <input type="date" id="input1" name="input1">
+
+        <p>Master Camper Cat officiated the cage match between Goro and Scorpion
+            <time datetime="2013-02-13">last Wednesday</time>, which ended in a draw.</p>
+
+        <!--4.5 to 1 contrast ratio for normal text. 21:1 white on black background-->
+        <button accesskey="b">Important Button</button>
+        <!-- accesskey can also be added on links-->
+    </main>
+</body>

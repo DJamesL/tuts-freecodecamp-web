@@ -1,0 +1,135 @@
+<style>
+    a {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.7);
+        box-shadow: 25px 10px 0px 0px green;
+        /*offset-x offset-y blur-radius spread-radius */
+        opacity: 0.7;
+        /*A value of 1 is opaque, which isn't transparent at all. A value of 0.5 is half see-through. 
+        A value of 0 is completely transparent.*/
+        text-transform: lowercase;
+        /* Value Result lowercase "transform me",  uppercase "TRANSFORM ME",  capitalize "Transform Me"
+         initial Use the default value inherit Use the text-transform value from the parent element none 
+         Default: Use the original text font-size: 14px*/
+        font-weight: 500;
+        line-height: 25px;
+        /*Line spacing..*/
+    }
+
+
+    a:hover {
+        /*Changes style of "a" when pointed at. Links.*/
+        color: #00F;
+    }
+
+    .test {
+        position: relative;
+        top: 15px;
+        /*
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    position: fixed;
+    */
+        /* */
+        float: left;
+        /* or right. parang gawin mo column*/
+        z-index: 2;
+        /* accepts integer value,
+        the higher one will overlap the lower val */
+        margin: auto;
+        /* centers an element */
+        background: hsl(180, 100%, 50%);
+        /*hue saturation lightness, this code, produces cyan */
+        /*background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...); */
+        /* Linear gradient */
+        background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+        background: url("https://i.imgur.com/MJAkxbh.png");
+        transform: scale(1.5);
+        /* scale nanupata*/
+        transform: skewX(24deg);
+        transform: skewY(24deg);
+        border-radius: 50%;
+        /* circular object*/
+        /* */
+    }
+
+    /* Creates a pink heart shape object */
+
+    .heart {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: pink;
+        height: 50px;
+        width: 50px;
+        transform: rotate(-45deg);
+    }
+
+    .heart:after {
+        background-color: pink;
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 25px;
+    }
+
+    .heart:before {
+        content: " ";
+        background-color: pink;
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 0px;
+    }
+
+    /* Creates a rounded edge rectangle, that changes color */
+
+    #rect {
+        animation-name: rainbow;
+        animation-duration: 4s;
+    }
+
+    @keyframes rainbow {
+        0% {
+            background-color: blue;
+        }
+        50% {
+            background-color: green;
+        }
+        100% {
+            background-color: yellow;
+        }
+    }
+
+    /* 
+    <style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    }
+    @keyframes background-color {
+        100% {
+            background-color: #4791d0;
+        }
+    }
+    </style>
+    <button>Register</button>
+    */
+</style>

@@ -1,0 +1,80 @@
+<style>
+    .d1 {
+        background: LightSkyBlue;
+    }
+
+    .d2 {
+        background: LightSalmon;
+        justify-self: center;
+        /*
+        start: aligns the content at the left of the cell,
+        center: aligns the content in the center of the cell,
+        end: aligns the content at the right of the cell.
+        */
+    }
+
+    .d3 {
+        background: PaleTurquoise;
+    }
+
+    .d4 {
+        background: LightPink;
+    }
+
+    .d5 {
+        background: PaleGreen;
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+        /* to control the consumption to the grid. <start> <end>*/
+        grid-area: footer; /* placement based from the custom name*/
+        /*grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at; */
+    }
+
+    .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* grid view*/
+        grid-template-columns: 100px 100px 100px;
+        /* grid-template-columns: repeat(3, 100px);  shortcut */
+        /* grid-template-columns: repeat(3,minmax(90px, 1fr));*/
+        /* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); */
+        /* grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); */
+        /* Creates a 3 column 100px grid */
+        grid-template-rows: 50px 50px;
+        /* Creates a 2 row 50px grid */
+        /* sizes can be:
+        px:
+        fr: sets the column or row to a fraction of the available space,
+        auto: sets the column or row to the width or height of its content automatically,
+        %: adjusts the column or row to the percent width of its container.
+        */
+        grid-column-gap: 20px;
+        grid-row-gap: 5px;
+        grid-gap: 10px 20px;
+        /* grid-row-gap and grid-column-gap*/
+        justify-items: center;
+        grid-template-areas: "header header header" ". content content" "footer footer footer";
+
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cover page over all</title>
+</head>
+
+<main>
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>
+</main>
+
+</html>

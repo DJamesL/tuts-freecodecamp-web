@@ -1,0 +1,82 @@
+<style>/* */
+    #box-container {
+        height: 500px;
+        display: flex; /*allows you to use other flex properties to build a responsive page. */
+        flex-direction: row-reverse; /* flips, but still on row*/
+        flex-direction: column;  /*well, column. */
+        justify-content: center;
+        /*  flex-start: aligns items to the start of the flex container. 
+                For a row, this pushes the items to the left of the container. 
+                For a column, this pushes the items to the top of the container.
+            flex-end: aligns items to the end of the flex container. 
+                For a row, this pushes the items to the right of the container. 
+                For a column, this pushes the items to the bottom of the container.
+            space-between: aligns items to the center of the main axis, with extra space placed between the items. 
+                The first and last items are pushed to the very edge of the flex container. 
+                For example, in a row the first item is against the left side of the container, 
+                the last item is against the right side of the container, then the other items 
+                between them are spaced evenly.
+            space-around: similar to space-between but the first and last 
+                items are not locked to the edges of the container, the space is distributed around all the items*/
+        align-items: center;
+        /*  flex-start: aligns items to the start of the flex container. 
+                For rows, this aligns items to the top of the container. 
+                For columns, this aligns items to the left of the container.
+            flex-end: aligns items to the end of the flex container. 
+                For rows, this aligns items to the bottom of the container. 
+                For columns, this aligns items to the right of the container.
+            center: align items to the center. For rows, this vertically aligns
+                 items (equal space above and below the items). 
+                 For columns, this horizontally aligns them (equal space to the left and right of the items).
+            stretch: stretch the items to fill the flex container. 
+                For example, rows items are stretched to fill the flex container top-to-bottom.
+            baseline: align items to their baselines. Baseline is a text concept,
+                 think of it as the line that the letters sit on.
+        */
+        flex-wrap: wrap;
+        /*  nowrap: this is the default setting, and does not wrap items.
+            wrap: wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.
+            wrap-reverse: wraps items from right-to-left if they are in a row, or bottom-to-top 
+            if they are in a column.
+        */
+        flex-basis: auto; /* specifies the initial size of the item  */
+        /* flex: 0 1 auto;(default)  -> flex: <flex-grow value> <flex-shrink value> <flex-basis value>;*/
+        order: 2; /*ow flex items appear in the flex container */
+        align-self: center; /* adjust each item's alignment individually */
+    }
+
+    #box-1 {
+        background-color: dodgerblue;
+        width: 50%;
+        height: 50%;
+        flex-shrink:2; 
+        /* allows an item to shrink if the flex container is too small, takes integer*/
+        /*flex-grow:1;*/
+        
+    }
+
+    #box-2 {
+        background-color: orangered;
+        width: 50%;
+        height: 50%;
+
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS flexbox</title>
+</head>
+
+<main>
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
+</main>
+
+</html>
